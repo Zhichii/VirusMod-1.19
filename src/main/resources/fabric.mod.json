@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "virus",
+  "version": "${version}",
+
+  "name": "VirusMod",
+  "description": "This mod added the virus! Take care! ",
+  "authors": [
+    "Bilibili @ 山丘MountainQiu"
+  ],
+  "contact": {
+    "homepage": "https://space.bilibili.com/521877155",
+    "sources": "https://github.com/Zhichii/VirusMod/tree/HillQiu"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.virus.VirusMain"
+    ],
+    "client": [
+      "net.virus.VirusClient"
+    ]
+  },
+  "mixins": [
+    "virus.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.9",
+    "fabric": "*",
+    "minecraft": ">=1.19",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
