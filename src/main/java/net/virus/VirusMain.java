@@ -32,9 +32,11 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
+import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
+import net.minecraft.world.dimension.DimensionTypes;
 import net.virus.entities.Virus;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -59,7 +61,8 @@ public class VirusMain implements ModInitializer {
 
 		@Override
 		public void applyUpdateEffect(LivingEntity entity, int amplifier) {
-			entity.setMovementSpeed(0.0F);
+			entity.forwardSpeed = 0.0F;
+			entity.sidewaysSpeed = 0.0F;
 		}
 
 	}
@@ -237,6 +240,7 @@ public class VirusMain implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		//BuiltinRegistries.DIMENSION_TYPE.get(DimensionTypes.OVERWORLD_ID).se();
 		reg();
 		LOGGER.info("mod: test");
 	}

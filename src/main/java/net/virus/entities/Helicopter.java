@@ -107,59 +107,46 @@ public class Helicopter implements ModInitializer {
 					this.setRotation(this.getYaw(), this.getPitch());
 					float f = livingEntity.sidewaysSpeed * 0.5F;
 					float g = livingEntity.forwardSpeed;
-					this.travel(new Vec3d(f, this.jumpStrength, g));
-
+					this.travel(new Vec3d(f, 0, g));
 					this.tryCheckBlockCollision();
 				}
+				this.move(MovementType.SELF, this.getVelocity());
 			}
+			if (this.isTouchingWater()) this.setVelocity(this.getVelocity().multiply(0.800000011920929));
+			else if (this.isInLava()) this.setVelocity(this.getVelocity().multiply(0.5));
+			else this.setVelocity(this.getVelocity().multiply(0.91F));
 		}
 
 		public void travel(Vec3d movementInput) {
 			if (this.isTouchingWater()) {
-				this.updateVelocity(0.02F, movementInput);
-				this.move(MovementType.SELF, this.getVelocity());
+				this.updateVelocity(0.05F, movementInput);
 				this.jumpStrength = this.jumpStrength * 0.800000011920929F;
-				this.setVelocity(this.getVelocity().multiply(0.800000011920929));
 			} else if (this.isInLava()) {
-				this.updateVelocity(0.02F, movementInput);
-				this.move(MovementType.SELF, this.getVelocity());
+				this.updateVelocity(0.05F, movementInput);
 				this.jumpStrength = this.jumpStrength * 0.5F;
-				this.setVelocity(this.getVelocity().multiply(0.5));
 			} else {
-				float f = 0.91F;
-				if (this.onGround) {
-					f = this.world.getBlockState(new BlockPos(this.getX(), this.getY() - 1.0, this.getZ())).getBlock().getSlipperiness() * 0.91F;
-				}
+				float g = 0.16277137F / (0.91F * 0.91F * 0.91F);
 
-				float g = 0.16277137F / (f * f * f);
-				f = 0.91F;
-				if (this.onGround) {
-					f = this.world.getBlockState(new BlockPos(this.getX(), this.getY() - 1.0, this.getZ())).getBlock().getSlipperiness() * 0.91F;
-				}
-
-				this.updateVelocity(this.onGround ? 0.04F * g : 0.08F, movementInput);
-				this.move(MovementType.SELF, this.getVelocity());
-				this.jumpStrength = this.jumpStrength * f;
-				this.setVelocity(this.getVelocity().multiply(f));
+				this.updateVelocity(this.onGround ? 0.05F * g : 0.2F, movementInput);
+				this.jumpStrength = this.jumpStrength * 0.91F;
 			}
 		}
 
 		@Override
 		public void setJumpStrength(int strength) {
-			this.jumpStrength = 0.4F + 0.4F * (float)strength / 90.0F;;
+			//this.jumpStrength = strength > 0? 90.0F: 0.0F;
 		}
 
 		@Override
 		public boolean canJump() { return true; }
 
 		@Override
-		public void startJumping(int height) { }
+		public void startJumping(int height) {
+			this.jumpStrength = height > 0? 1.0F: 0.0F;
+			this.move(MovementType.SELF, new Vec3d(0, jumpStrength, 0));
+		}
 
 		public void stopJumping() { }
-
-		public boolean isCollidable() {
-			return true;
-		}
 
 		public boolean isPushable() {
 			return true;
@@ -170,7 +157,7 @@ public class Helicopter implements ModInitializer {
 		}
 
 		public double getMountedHeightOffset() {
-			return -0.1;
+			return 0.1F;
 		}
 
 		public boolean damage(DamageSource source, float amount) {

@@ -6,7 +6,10 @@
   "mixins": [
   ],
   "client": [
-    "VirusMixin"
+    "TitleScreenMixin",
+    "KeyBoardInputMixin",
+    "YLevelsMixin",
+    "DimensionTypeRegistrarMixin"
   ],
   "injectors": {
     "defaultRequire": 1
