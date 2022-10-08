@@ -6,5 +6,5 @@ import org.spongepowered.asm.mixin.Mixin;
 @Mixin(YLevels.class)
 public class YLevelsMixin {
     public static final int OVERWORLD_MIN_Y = -128;
-    public static final int OVERWORLD_HEIGHT = 512;
+    public static final int OVERWORLD_HEIGHT = 2048;
 }

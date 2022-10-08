@@ -240,7 +240,6 @@ public class VirusMain implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		//BuiltinRegistries.DIMENSION_TYPE.get(DimensionTypes.OVERWORLD_ID).se();
 		reg();
 		LOGGER.info("mod: test");
 	}
