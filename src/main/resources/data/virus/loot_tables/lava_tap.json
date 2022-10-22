@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "virus:lava_tap"
+          "name": "hill:lava_tap"
         }
       ],
       "conditions": [

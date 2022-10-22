@@ -1,0 +1,18 @@
+{
+  "menu.copyright": "Mojang AB版权所有。不要散布！",
+  "block.hill.tap": "空龙头", 
+  "block.hill.water_tap": "水龙头", 
+  "block.hill.lava_tap": "熔岩龙头", 
+  "item.minecraft.potion.effect.alcohol": "酒精瓶", 
+  "item.minecraft.splash_potion.effect.alcohol": "喷溅型酒精瓶", 
+  "item.minecraft.lingering_potion.effect.alcohol": "滞留型酒精瓶", 
+  "item.hill.mask": "口罩", 
+  "item.hill.virus_spawn_egg": "病毒刷怪蛋", 
+  "item.hill.helicopter": "直升机",
+  "item.hill.car": "车",
+  "item.hill.slow_faller": "缓降伞",
+  "entity.hill.virus": "病毒",
+  "entity.hill.helicopter": "直升机",
+  "entity.hill.car": "车",
+  "effect.hill.faint": "昏倒"
+}

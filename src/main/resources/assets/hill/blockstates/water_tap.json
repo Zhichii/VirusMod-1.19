@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "hill:block/tap",
+      "y": 270
+    }, 
+    "facing=north": {
+      "model": "hill:block/tap",
+      "y": 180
+    }, 
+    "facing=south": {
+      "model": "hill:block/tap"
+    }, 
+    "facing=west": {
+      "model": "hill:block/tap",
+      "y": 90
+    }
+  }
+}

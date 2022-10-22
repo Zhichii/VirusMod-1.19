@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.hill.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+  ],
+  "client": [
+    "TitleScreenMixin",
+    "KeyBoardInputMixin",
+    "YLevelsMixin",
+    "DimensionTypeRegistrarMixin",
+    "InGameHudMixin",
+    "BlockMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

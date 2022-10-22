@@ -1,0 +1,18 @@
+{
+  "menu.copyright": "Mojang AB持版。無散！",
+  "block.hill.tap": "空滴皿", 
+  "block.hill.water_tap": "水滴皿", 
+  "block.hill.lava_tap": "熔岩滴皿", 
+  "item.minecraft.potion.effect.alcohol": "酒精劑", 
+  "item.minecraft.splash_potion.effect.alcohol": "酒精噴劑", 
+  "item.minecraft.lingering_potion.effect.alcohol": "酒精滯劑", 
+  "item.hill.mask": "罩", 
+  "item.hill.virus_spawn_egg": "毒之卵", 
+  "item.hill.helicopter": "升器",
+  "item.hill.car": "車",
+  "item.hill.slow_faller": "緩降傘",
+  "entity.hill.virus": "毒",
+  "entity.hill.helicopter": "升器",
+  "entity.hill.car": "車",
+  "effect.hill.faint": "昏"
+}

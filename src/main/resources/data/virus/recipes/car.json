@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "iii",
-    " ri",
+    "grg",
     "iii"
   ],
   "key": {
@@ -11,9 +11,12 @@
     },
     "r": {
       "item": "minecraft:redstone"
+    },
+    "g":{
+      "item": "minecraft:glass"
     }
   },
   "result": {
-    "item": "hill:helicopter"
+    "item": "hill:car"
   }
 }

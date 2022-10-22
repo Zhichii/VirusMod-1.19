@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "id": "virus",
+  "id": "hill",
   "version": "${version}",
 
-  "name": "VirusMod",
-  "description": "This mod added the virus! Take care! ",
+  "name": "HillMod",
+  "description": "This is HillQiu's first mod! Not stable! ",
   "authors": [
     "Bilibili @ 山丘MountainQiu"
   ],
   "contact": {
     "homepage": "https://space.bilibili.com/521877155",
-    "sources": "https://github.com/Zhichii/VirusMod-1.19/tree/HillQiu"
+    "sources": "https://github.com/Zhichii/HillMod"
   },
 
   "license": "CC0-1.0",
@@ -19,14 +19,14 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.virus.VirusMain"
+      "com.hill.HillModMain"
     ],
     "client": [
-      "net.virus.VirusClient"
+      "com.hill.HillModClient"
     ]
   },
   "mixins": [
-    "virus.mixins.json"
+    "hill.mixins.json"
   ],
 
   "depends": {

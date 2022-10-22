@@ -1,0 +1,18 @@
+{
+  "menu.copyright": "Copyright Mojang AB. Do not distribute!",
+  "block.hill.tap": "Tap", 
+  "block.hill.water_tap": "Water Tap", 
+  "block.hill.lava_tap": "Lava Tap", 
+  "item.minecraft.potion.effect.alcohol": "Bottle of Alcohol", 
+  "item.minecraft.splash_potion.effect.alcohol": "Splash Bottle of Alcohol", 
+  "item.minecraft.lingering_potion.effect.alcohol": "Lingering Bottle of Alcohol", 
+  "item.hill.mask": "Mask",
+  "item.hill.virus_spawn_egg": "Virus Spawn Egg", 
+  "item.hill.helicopter": "Helicopter",
+  "item.hill.car": "Car",
+  "item.hill.slow_faller": "Slow Faller",
+  "entity.hill.virus": "Virus", 
+  "entity.hill.helicopter": "Helicopter",
+  "entity.hill.car": "Car",
+  "effect.hill.faint": "Faint"
+}
