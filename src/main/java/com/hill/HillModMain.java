@@ -68,6 +68,7 @@ public class HillModMain implements ModInitializer {
 
 	}
 
+	//口罩成员内部类，主要规定了模组内容“口罩”的各种属性，实现了ArmorMaterial接口（盔甲材质）。从这里能看出来，口罩其实是一个盔甲
 	public class MaskMaterial implements ArmorMaterial {
 		private static final int[] BASE_DURABILITY = new int[] {0, 0, 0, 4};
 		private static final int[] PROTECTION_VALUES = new int[] {12, 0, 0, 0};
@@ -222,7 +223,7 @@ public class HillModMain implements ModInitializer {
 	public SlowFaller slow_faller = new SlowFaller(new Item.Settings().group(ItemGroup.TOOLS));
 	public static StatusEffect faint = new FaintEffect();
 	public Potion p_faint = new Potion("alcohol", new StatusEffectInstance(faint, 60, 1, true, true, true));
-
+	
 	public void reg() {
 		DefaultAttributeRegistryAccessor.getRegistry().put(Virus.VIRUS, Virus.VirusEntity.createMobAttributes().add(EntityAttributes.GENERIC_ATTACK_DAMAGE).build());
 		DefaultAttributeRegistryAccessor.getRegistry().put(TuffGolem.TUFFGOLEM, TuffGolem.TuffGolemEntity.createMobAttributes().build());
